@@ -1,0 +1,69 @@
+<!-- FOR DESIGN PURPOSE ONLY -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manager</title>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="navbar">
+        <nav class="bg-slate-200 p-4 w-full">
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand">User Manager</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main -->
+    <main id="main-site" class="mt-[6em]">
+        <div class="container max-w-[1024px]">
+            <div class="box-nav flex flex-wrap justify-between">
+            <a href="/add-user" class="border-shadow font-[1em] py-[.5em] px-[1em]">
+                    <span class="text-gray-900">Add</span> <i class="fas fa-user"></i>
+                </a>
+            </div>
+
+            <form action="/" method="post" class="my-[2em] mx-0">
+                <table class="border-spacing-0 w-full">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Active</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Blablabla</td>
+                            <td>blablabla@email.com</td>
+                            <td>Male</td>
+                            <td>Yes</td>
+                            <td>
+                                <a href="#" class="btn border-shadow update">
+                                    <span class="text-gray-900"><i class="fas fa-pencil"></i></span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gray-900"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!-- Main end -->
+</body>
+</html>

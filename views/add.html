@@ -1,0 +1,89 @@
+<!-- FOR DESIGN PURPOSE ONLY -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manager</title>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="navbar">
+        <nav class="bg-slate-200 p-4 w-full">
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand">User Manager</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main -->
+    <main id="main-site" class="mt-[6em] py-12">
+        <div class="container max-w-[1024px]">
+            <div class="box-nav flex flex-wrap justify-between">
+                <div class="filter">
+                    <a href="/" class="text-gray-800 font-bold"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-[2em]">
+                <h2 class="text-slate-800 font-bold text-3xl py-[.5em] uppercase">Create User</h2>
+                <span class="text-slate-600 font-semibold">Create a new user using the form below</span>
+            </div>
+
+            <form method="post" id="add-user">
+                <div class="new-user">
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label for="name" class="text-slate-600">Username</label>
+                        <input type="hidden" name="id">
+                        <input type="text" name="name" placeholder="Enter a name" required autocomplete="off">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="name" class="text-slate-600">Email</label>
+                        <input type="email" name="email" placeholder="Enter an email" autocomplete="off">
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label for="gender" class="text-slate-600">Gender</label>
+                        <div class="radio inline-block">
+                            <input type="radio" name="gender" value="Male" id="radio-male">
+                            <label for="radio-male" class="text-slate-600 radio-label">Male</label>
+                        </div>
+                        <div class="radio inline-block">
+                            <input type="radio" name="gender" value="Female" id="radio-female">
+                            <label for="radio-female" class="text-slate-600 radio-label">Female</label>
+                        </div>
+                    </div>
+
+                    <!-- Active -->
+                    <div class="form-group">
+                        <label for="active" class="text-slate-600">Active</label>
+                        <div class="radio inline">
+                            <input type="radio" name="active" value="Yes" id="radio-yes">
+                            <label for="radio-yes" class="text-slate-600 radio-label">Yes</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="active" value="No" id="radio-no">
+                            <label for="radio-no" class="text-slate-600 radio-label">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="w-full px-[.9em] py-[1em] bg-slate-300 font-bold rounded-md mt-5 border-none hover:shadow-lg hover:opacity-75 transition duration-300 ease-in-out my-[.5em] mx-0 update">Create</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Main end -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: sans-serif;    
+}
+
+.nav-brand {
+    @apply text-[1.5em] font-bold;
+}
+
+.border-shadow {
+    @apply border-solid border-[1px] border-slate-600 shadow-md;
+}
+
+table td, table th {
+    @apply p-[.75em] align-top text-center border border-solid;
+}
+
+.btn {
+    @apply py-[.3em] px-[1em] text-[1.1em] my-0 mx-[.2em];
+}
+
+table thead {
+    @apply bg-slate-700 text-white;
+}
+
+table tbody tr:hover {
+    @apply bg-slate-200;
+}
+
+@media only screen and (max-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        @apply block;
+    }
+
+    thead tr {
+        @apply absolute top-[-9999px] left-[-9999px]; 
+    }
+
+    tr {
+        @apply border border-solid;
+    }
+
+    td {
+        @apply border-none relative;
+    }
+}
+
+.new-user {
+    @apply max-w-[786px] m-auto;
+}
+
+#edit-user .form-group,
+#add-user .form-group {
+    @apply my-[.4em] mx-0;
+}
+
+#add-user .form-group input[type="text"], 
+#add-user .form-group input[type="email"],
+#edit-user .form-group input[type="text"], 
+#edit-user .form-group input[type="email"] {
+    @apply w-full px-[1em] py-[.6em] border-2 border-solid my-[.5em] mx-0 text-[1em] rounded-[.2em];
+}
+
+#edit-user .form-group .radio,
+#add-user .form-group .radio {
+    @apply my-[1em] mx-[2em];
+}
+
+.radio input[type="radio"] {
+    @apply absolute opacity-0;
+}
+
+.radio input[type="radio"] + .radio-label:before {
+    @apply content-[""] bg-slate-300 rounded-full border border-solid border-slate-900 inline-block w-[1em] h-[1em] relative top-[-0em] mr-[.5em] align-top cursor-pointer text-center transition-all duration-[250ms] ease-in-out;
+}
+
+.radio input[type="radio"]:checked + .radio-label:before {
+    @apply bg-green-500 shadow-md;
+}
+
+.radio input[type="radio"]:focus + .radio-label:before {
+    @apply outline-none border-slate-100;
+}
+
+.radio input[type="radio"]:disabled + .radio-label:before {
+    box-shadow: inset 0 0 0 4px;
+    @apply border-slate-100 bg-slate-100;
+}

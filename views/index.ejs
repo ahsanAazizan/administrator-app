@@ -1,0 +1,55 @@
+<!-- Header -->
+<%- include('templates/_header') %>
+<% var i = 1 %>  
+<!-- Header end -->
+
+<!-- Main -->
+<main id="main-site" class="mt-[6em]">
+    <div class="container max-w-[1024px]">
+        <div class="box-nav flex flex-wrap justify-between">
+            <a href="/add-user" class="border-shadow font-[1em] py-[.5em] px-[1em] hover:shadow-lg hover:text-white hover:bg-slate-600 transition duration-300 ease-in-out">
+                    Add <i class="fa-solid fa-square-plus"></i>
+            </a>
+        </div>
+
+        <form action="/" method="post" class="my-[2em] mx-0">
+            <table class="border-spacing-0 w-full">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Active</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => {%> 
+                    <tr>
+                        <td><%= i %> </td>
+                        <td><%= user.username %> </td>
+                        <td><%= user.email %> </td>
+                        <td><%= user.gender %> </td>
+                        <td><%= user.active %> </td>
+                        <td>
+                            <a href="/edit-user?id=<%= user._id %> " class="btn hover:bg-white update">
+                                <span class="text-gray-900"><i class="fa-solid fa-pen-to-square"></i></span>
+                            </a>
+                            <a class="btn hover:bg-white delete" data-id=<%= user._id %>>
+                                <span class="text-gray-900"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <% i++ %> 
+                    <% }) %> 
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- Main end -->
+
+<!-- Footer -->
+<%- include('templates/_footer') %> 
+<!-- Footer end -->
