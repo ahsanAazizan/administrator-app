@@ -18,7 +18,7 @@ DELETE http://localhost:PORT/api/users/:id
 # Setup
 create .env file, and declare two variable called URI(your mongodb uri) and PORT(your port). Also set the port variable at /resources/js/client.js to whatever port you use at .env file. After that, you're good to go
 
-# Run command :
+### Run command :
 ```console
 npm i
 npm start
