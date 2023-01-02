@@ -1,12 +1,5 @@
 const User = require('../models/User')
 
-function checkBody(req, res) {
-    if (!req.body) {
-        res.status(500).send({msg: "Request's body cant be empty"})
-        return true
-    }
-}
-
 // Create
 const createUser = (req, res) => {
     // check request's body
