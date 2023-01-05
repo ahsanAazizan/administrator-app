@@ -1,4 +1,4 @@
-# REQUESTS
+## Requests
 
 ### Get all users
 GET http://localhost:PORT/api/users/
